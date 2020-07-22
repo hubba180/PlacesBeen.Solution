@@ -71,5 +71,14 @@ namespace PlacesBeen.Tests
 
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void Find_GrabsPlaceObjectByIDFromStaticList_Place()
+    {
+      string cityName = "Portland";
+      string description = "So much beer!";
+      Place newPlace = new Place(cityName, description);
+      Place result = Place.Find(1);
+      Assert.AreEqual(newPlace, result);
+    }
   }
 }
