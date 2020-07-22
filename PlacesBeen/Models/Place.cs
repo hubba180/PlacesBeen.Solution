@@ -27,9 +27,7 @@ namespace PlacesBeen.Models
     }
     public static Place Find(int id)
     {
-      Place wrongPlace = new Place("Not Portland", "No beer.");
-      return wrongPlace;
-      // _instances[id - 1]
+      return _instances[id - 1];
     }
   }
 }
