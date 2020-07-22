@@ -5,7 +5,6 @@ namespace PlacesBeen.Models
   public class Place
   {
     private static List<Place> _instances = new List<Place> {};
-    
     public string CityName { get; }
     public string Description { get; set; }
     public int Id { get; }

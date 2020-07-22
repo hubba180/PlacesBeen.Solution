@@ -8,10 +8,6 @@
     <h1>Places I've Been:</h1>
     <div>
       <ul>
-      @* @{
-        Place portland = new Place("Portland", "Lots of beer!");
-        Place seattle = new Place("Seattle", "We saw whales!");
-      } *@
         @foreach (Place element in Model)
         {
           <li>@element.CityName</li>
