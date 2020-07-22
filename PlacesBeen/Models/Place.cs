@@ -2,7 +2,7 @@ namespace PlacesBeen.Models
 {
   public class Place
   {
-    public string CityName { get; set; }
+    public string CityName { get; }
 
     public Place(string cityName)
     {

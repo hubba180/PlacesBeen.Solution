@@ -12,5 +12,16 @@ namespace PlacesBeen.Tests
       Place newPlace = new Place("Portland");
       Assert.AreEqual(typeof(Place), newPlace.GetType());
     }
+
+    [TestMethod]
+    public void GetCityName_ReturnsCityName_String()
+    {
+      string cityName = "Portland";
+
+      Place newPlace = new Place("Portland");
+      string result = newPlace.CityName;
+
+      Assert.AreEqual(cityName, result);
+    }
   }
 }
