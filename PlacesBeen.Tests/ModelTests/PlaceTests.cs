@@ -16,7 +16,7 @@ namespace PlacesBeen.Tests
     [TestMethod]
     public void PlaceConstructor_CreatesInstanceOfPlace_Place()
     {
-      Place newPlace = new Place("Portland");
+      Place newPlace = new Place("Portland", "So much beer!");
       Assert.AreEqual(typeof(Place), newPlace.GetType());
     }
 
@@ -25,7 +25,7 @@ namespace PlacesBeen.Tests
     {
       string cityName = "Portland";
 
-      Place newPlace = new Place("Portland");
+      Place newPlace = new Place("Portland", "So much beer!");
       string result = newPlace.CityName;
 
       Assert.AreEqual(cityName, result);
@@ -38,5 +38,28 @@ namespace PlacesBeen.Tests
       List<Place> result = new List<Place> {};
       CollectionAssert.AreEqual(testList, result);
     }
+
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      string description = "So much beer!";
+      Place newPlace = new Place("Portland", description);
+      string result = newPlace.Description;
+
+      Assert.AreEqual(description, result);
+    }
+
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      string description = "so much beer";
+      Place newPlace = new Place("Portland", description);
+      string update = "too much beer";
+      newPlace.Description = update;
+      string result = newPlace.Description;
+      Assert.AreEqual(update, result);
+    }
+
+
   }
 }
