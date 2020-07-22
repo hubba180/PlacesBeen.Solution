@@ -60,6 +60,16 @@ namespace PlacesBeen.Tests
       Assert.AreEqual(update, result);
     }
 
+    [TestMethod]
+    public void GetId_PlacesInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      string cityName = "Portland";
+      string description = "So much beer!";
+      Place newPlace = new Place(cityName, description);
 
+      int result = newPlace.Id;
+
+      Assert.AreEqual(1, result);
+    }
   }
 }

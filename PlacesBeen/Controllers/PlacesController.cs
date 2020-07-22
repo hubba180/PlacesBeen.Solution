@@ -25,5 +25,12 @@ namespace PlacesBeen.Controllers
       Place newPlace = new Place(cityName, description);
       return RedirectToAction("Index");
     }
+
+    [HttpPost("/places/delete")]
+    public ActionResult DeleteAll()
+    {
+      Place.ClearAll();
+      return RedirectToAction("Index");
+    }
   }
 }
