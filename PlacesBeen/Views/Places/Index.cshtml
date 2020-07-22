@@ -1,0 +1,18 @@
+@using PlacesBeen.Models;
+<!Doctype html>
+<html>
+  <head>
+    <title>Places List</title>
+  </head>
+  <body>
+    <h1>Places I've Been:</h1>
+    <div>
+      <ul>
+        @foreach (Place element in Model)
+        {
+          <li>@element.CityName</li>
+        }
+      </ul>
+    </div>
+  </body>
+</html>
