@@ -9,13 +9,16 @@
     <div>
       @if (Model.Count == 0)
         {
-          Place portland = new Place("portland");
-          Place seattle = new Place("seattle");
+          Place portland = new Place("Portland", "Lots of beer!");
+          Place seattle = new Place("Seattle", "We saw whales!");
         }
       <ul>
         @foreach (Place element in Model)
         {
           <li>@element.CityName</li>
+            <ul>
+              <li>@element.Description</li>
+            </ul>
         }
       </ul>
 

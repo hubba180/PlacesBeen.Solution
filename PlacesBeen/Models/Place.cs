@@ -7,10 +7,12 @@ namespace PlacesBeen.Models
     private static List<Place> _instances = new List<Place> {};
     
     public string CityName { get; }
+    public string Description { get; set; }
 
-    public Place(string cityName)
+    public Place(string cityName, string description)
     {
       CityName = cityName;
+      Description = description;
       _instances.Add(this);
     }
     public static List<Place> GetAll() 
