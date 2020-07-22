@@ -8,13 +8,14 @@ namespace PlacesBeen.Models
     
     public string CityName { get; }
     public string Description { get; set; }
-    public int Id { get; } = 0;
+    public int Id { get; }
 
     public Place(string cityName, string description)
     {
       CityName = cityName;
       Description = description;
       _instances.Add(this);
+      Id = _instances.Count;
     }
     public static List<Place> GetAll() 
     {
